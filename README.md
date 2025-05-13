@@ -31,7 +31,7 @@ src/
 For local development, you can run Consul using Docker:
 
 ```bash
-docker run -d --name consul -p 8500:8500 -p 8600:8600 consul
+docker-compose up
 ```
 
 Access the Consul UI at: http://localhost:8500
