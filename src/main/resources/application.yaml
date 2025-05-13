@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: data-service
+  config:
+    import: "optional:consul:"
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      config:
+        enabled: true
+        format: YAML
+        prefix: config
+        default-context: application
+        data-key: data
+        fail-fast: false
+        watch:
+          enabled: true
+          delay: 1000
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info, refresh
+  health:
+    consul:
+      enabled: true
