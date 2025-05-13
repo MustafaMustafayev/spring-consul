@@ -26,3 +26,6 @@ management:
   health:
     consul:
       enabled: true
+
+data:
+  url: my-test-url

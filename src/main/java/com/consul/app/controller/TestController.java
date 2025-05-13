@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class TestController {
 
     private final DataConfig dataConfig;
-
     public TestController(DataConfig dataConfig) {
         this.dataConfig = dataConfig;
     }
@@ -24,8 +23,8 @@ public class TestController {
         return dataConfig.getUrl();
     }
 
-    @GetMapping("second")
-    public String testSecond() {
+    @GetMapping("value")
+    public String testValue() {
         return testData;
     }
 }
